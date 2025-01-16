@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# IoT Lab Equipment Distribution System
 
-## Getting Started
+## Overview
+The **IoT Lab Equipment Distribution System** is a web-based platform designed to streamline the process of equipment distribution in educational institutions. It enables students, teachers, and lab attendants to manage lab equipment efficiently, securely, and transparently. Built with HTML, CSS, JavaScript, PHP, and MySQL, the system ensures seamless data management and user-friendly interaction.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+- **Real-Time Equipment Tracking**: Check availability, usage, and distribution of lab equipment.
+- **Role-Based Dashboards**:
+  - **Students**: Apply for equipment, track applications, and confirm usage.
+  - **Teachers**: Approve or reject student requests.
+  - **Lab Attendants**: Manage inventory, handle distribution, and update records.
+- **Secure Data Handling**: Ensures all transitions are logged and critical records are non-editable.
+- **User-Friendly Interface**: Search, filter, and manage data effortlessly with a responsive design.
+- **No-Reload System**: Smooth interactions using AJAX for dynamic updates.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## System Requirements
+### Hardware
+- **Server**: 
+  - Processor: 7th generation i5
+  - RAM: 128MB
+  - Storage: 20GB minimum
+- **Client**:
+  - Same as server specs.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Software
+- **Platform**: Windows 8-11
+- **Tools**:
+  - [Visual Studio Code (VS Code)](https://code.visualstudio.com/)
+  - [XAMPP](https://www.apachefriends.org/index.html) for server and database management.
+- **Technologies**:
+  - **Frontend**: HTML, CSS, JavaScript
+  - **Backend**: PHP, MySQL
+  - **Frameworks**: jQuery, AJAX
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Process Flow
+1. **Student**:
+   - Apply for equipment via the dashboard.
+   - Provide quantity, purpose, and teacher reference.
+2. **Teacher**:
+   - Review and approve/reject student applications.
+3. **Lab Attendant**:
+   - Verify teacher approval.
+   - Update distribution and return timestamps.
+4. **Completion**:
+   - Return equipment and close the record.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Database Structure
+### Tables
+1. **student_information**: Stores student details.
+2. **teacher_information**: Stores teacher details.
+3. **apply_related_data**: Tracks student applications.
+4. **equipment_related_data**: Manages inventory.
+5. **provide_confirm_Status**: Logs distribution and return confirmations.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Installation
+1. Install **XAMPP** and ensure Apache and MySQL are running.
+2. Import the database schema provided in `database.sql` to MySQL.
+3. Place the project files in the `htdocs` folder of XAMPP.
+4. Open the project in a browser via `localhost/project-folder`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+## Screenshots
+### Student Dashboard
+- View personal info, apply for equipment, and track applications.
+
+### Teacher Dashboard
+- Approve/reject student requests and manage records.
+
+### Lab Attendant Dashboard
+- Manage inventory, handle distributions, and confirm returns.
+
+---
+
+## Future Enhancements
+- **Email Notifications**: Automate communication between users.
+- **Image Updates**: Allow users to upload/update profile pictures.
+- **Additional Records**: Include fields like age and birthdate for detailed profiles.
+- **Extended Reporting**: Generate detailed usage reports for analysis.
+
+---
+
+## Authors
+- **Sumon Ahemed** (1801042)
+- **Mohaimenul Islam Mahin** (1901025)
+- **Bitta Boibhov Barmon** (1901050)
+
+**Supervisor**: Nurjahan Nipa, Assistant Professor, Department of Internet of Things & Robotics Engineering , BDU.
+
+---
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## References
+1. [PHP CRUD Operation](https://www.tutorialrepublic.com/php-tutorial/php-mysql-crud-application.php)
+2. [jQuery AJAX Tutorial](https://www.w3schools.com/jquery/jquery_ref_ajax.asp)
+3. [JavaScript Checkbox](https://www.w3schools.com/jsref/prop_checkbox_checked.asp)
+4. [PHP Associative Arrays](https://www.w3schools.com/php/php_arrays_associative.asp)
