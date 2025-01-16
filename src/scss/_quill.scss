@@ -1,0 +1,38 @@
+.reactQuill {
+  .quill {
+    .ql-toolbar {
+      display: none;
+      &.ql-snow {
+        border: 0;
+        padding: 0;
+      }
+    }
+    .ql-container {
+      &.ql-snow {
+        border: 0;
+      }
+      .ql-editor {
+        padding: 0;
+      }
+      .ql-tooltip.ql-editing {
+        z-index: 2;
+      }
+    }
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    button {
+      & > div > svg {
+        fill: $gray;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        &:hover {
+          fill: $blue;
+        }
+      }
+    }
+  }
+}

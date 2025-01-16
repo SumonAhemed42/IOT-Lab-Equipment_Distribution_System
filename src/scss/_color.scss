@@ -1,0 +1,197 @@
+/*****
+ * Variables
+ ******/
+$blue: var(--blue); // #007bff
+$blue2: var(--blue2); // #0069da
+$lightBlue: var(--lightBlue); // #e8f0fe
+$lightBlue2: var(--lightBlue2); // #9fc3fe
+
+$redBdu: #d32f2f;
+$violetBdu: #98017e;
+$blueBdu: #184b71;
+$blueBdu2: #41b2ff;
+
+$borderGray: #dadce0;
+
+$red: #dc3545;
+$green: #28a745;
+$yellow: #ffc107;
+$orange: #fd7e14;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$white: #fff;
+$pink: #d91a60;
+$pinkBkash: #e2146f;
+$pinkBkash2: #bd1e5d;
+
+$placeholder: #737373;
+$gray: #6c757d;
+$gray2: #cccccc;
+$grayTextGoogle: #4d5156;
+$grayTextGoogleClassroom: #3c4043;
+$grayTextGoogleMeet: #61656a;
+$grayIconGoogle: #9aa0a6;
+
+$modalBg: rgba(32, 33, 36, 0.6);
+
+// Color variable : 2nd part -->
+$lightGray: #f2f2f2;
+$lightGray2: #d9d9d9;
+$lightGray3: #bfbfbf;
+$lightGray4: #f7f7f7;
+$lightGray5: #f2f2f2;
+$lightGray6: #f5f5f5; // Hover-Light-Gray
+$lightBlue-git: #f6f8fa; // Github-Light-Blue
+
+// dark mode
+$black1: #010409; // bg
+$black2: #0d1117; // bg
+$black3: #1a1f24; // hover bg
+$black4: #21262d; // button bg
+
+@layer utilities {
+  /*****
+   * Background
+   ******/
+  .bgGlass50 {
+    background: rgba(255, 255, 255, 0.5);
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .bgGlass60 {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .bgGlass70 {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  .bgGlass80 {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .bg-gray-150 {
+    background: #ecedf0;
+  }
+
+  .bgBlue {
+    background: var(--blue);
+  }
+  .bgBlue2 {
+    background: var(--blue2);
+  }
+  .bgLightBlue {
+    background: var(--lightBlue);
+  }
+  .bgLightBlue2 {
+    background: var(--lightBlue2);
+  }
+
+  // Here color density decrease when level increase
+  // 1 have high color density, 4 have low color density
+  .bgBlack {
+    background: #010409; // from site: github.com
+  }
+  .bgBlack2 {
+    background: #0d1117; // from site: github.com
+  }
+  .bgBlack3 {
+    background: #1a1f24; // from site: github.com
+  }
+  .bgBlack4 {
+    background: #21262d; // from site: github.com
+  }
+
+  // Here color density increase when level increase
+  // 1 have low color density, 3 have high color density
+  .bgWhite {
+    background: white;
+  }
+  .bgWhite2 {
+    background: #f6f8fa; // from site: github.com
+  }
+  .bgWhite3 {
+    background: #eaeef2; // from site: github.com
+  }
+
+  .bgGrayFb {
+    background: #f3f3f5; // from site: facebook.com
+  }
+
+  .bgGrayApple {
+    background: #f5f5f7; // from site: apple.com
+  }
+  .bgBlackApple {
+    background: #282829; // from site: apple.com
+  }
+
+  // Dark version of tailwind classes
+  .dark .bg-blue-50,
+  .dark .bg-blue-100,
+  .dark .bg-gray-200 {
+    @apply bgBlack3;
+  }
+
+  /*****
+ * Text
+ ******/
+  .textBlue,
+  .dark .textBlue {
+    color: var(--blue);
+  }
+  .textBlue2,
+  .dark .textBlue2 {
+    color: var(--blue2);
+  }
+  .textLightBlue {
+    color: var(--lightBlue);
+  }
+  .textLightBlue2 {
+    color: var(--lightBlue2);
+  }
+  .textBlack {
+    color: $grayTextGoogleClassroom;
+  }
+  .dark .textBlack {
+    color: white;
+  }
+
+  /*****
+ * Fill
+ ******/
+  .fillBlue {
+    fill: var(--blue);
+  }
+  .fillBlue2 {
+    fill: var(--blue2);
+  }
+  .fillLightBlue {
+    fill: var(--lightBlue);
+  }
+  .fillLightBlue2 {
+    fill: var(--lightBlue2);
+  }
+
+  // Dark version of tailwind classes
+  .dark .fill-gray-500 {
+    @apply fill-gray-400;
+  }
+
+  /*****
+* Border
+******/
+  // Dark version of tailwind classes
+  .dark .border-gray-100,
+  .dark .border-gray-200,
+  .dark .border-gray-300 {
+    border-color: #30363db3;
+  }
+}

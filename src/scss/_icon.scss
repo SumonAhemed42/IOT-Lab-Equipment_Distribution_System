@@ -1,0 +1,61 @@
+.hoverIconSkeleton {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  &::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  &:hover,
+  &.active {
+    cursor: pointer;
+    &::before {
+      background: $lightBlue !important;
+    }
+    & > svg {
+      fill: $blue !important;
+    }
+  }
+
+  &.activeIconOnly {
+    & > svg {
+      fill: $blue !important;
+    }
+  }
+}
+.hoverIconSkeleton.whiteBackground {
+  &:hover,
+  &.active {
+    cursor: pointer;
+    &::before {
+      background: white !important;
+    }
+    & > svg {
+      fill: $blue !important;
+    }
+  }
+}
+.dark .hoverIconSkeleton {
+  &:hover,
+  &.active {
+    &::before {
+      background: $black4 !important;
+    }
+  }
+}
+
+.hoverScale {
+  transition: transform 150ms ease;
+  &:hover {
+    transform: scale(1.03);
+  }
+}

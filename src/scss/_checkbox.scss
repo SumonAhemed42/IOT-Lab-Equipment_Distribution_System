@@ -1,0 +1,321 @@
+/*****
+ * Square type checkbox
+ * Design is like default type checkbox
+ * Select checkbox with animation
+ * Usage component
+ <div class="squareCheckbox">
+     <input class="inp-cbx" id="morning" type="checkbox" checked />
+     <label class="cbx" for="morning">
+         <span>
+             <svg width="12px" height="10px">
+                 <use href="#idCheckbox1708707023205"></use>
+                 <!-- use `xlinkHref` instead of `href` in ReactJs -->
+             </svg>
+         </span>
+         <span>To-do</span>
+     </label>
+     <svg class="inline-svg">
+         <symbol id="idCheckbox1708707023205" viewBox="0 0 12 10">
+             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+         </symbol>
+     </svg>
+ </div>
+ ******/
+
+.squareCheckbox {
+  * {
+    box-sizing: border-box;
+  }
+
+  .cbx {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    display: inline-block;
+    transform: translateY(2px);
+
+    &:not(:last-child) {
+      margin-right: 0px;
+    }
+
+    span {
+      float: left;
+      vertical-align: middle;
+      transform: translate3d(0, 0, 0);
+
+      &:first-child {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        border-radius: 2px;
+        transform: scale(1);
+        border: 1px solid gray;
+        transition: all 0.2s ease;
+        box-shadow: 0 1px 1px rgba(0, 16, 75, 0.05);
+
+        svg {
+          position: absolute;
+          top: 2px;
+          left: 1px;
+          fill: none;
+          stroke: #fff;
+          stroke-width: 2;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-dasharray: 16px;
+          stroke-dashoffset: 16px;
+          transition: all 0.3s ease;
+          transition-delay: 0.1s;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      &:last-child {
+        padding-left: 0px;
+        line-height: 16px;
+      }
+    }
+
+    &:hover span:first-child {
+      border-color: $blue;
+    }
+  }
+
+  .inp-cbx {
+    position: absolute;
+    visibility: hidden;
+
+    &:checked + .cbx span:first-child {
+      background: $blue;
+      border-color: $blue;
+      animation: wave-4 0.4s ease;
+
+      svg {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+
+  .inline-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  @keyframes wave-4 {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+
+  @-webkit-keyframes wave-4 {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+
+  @-moz-keyframes wave-4 {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+
+  @-o-keyframes wave-4 {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+}
+
+/*****
+ * Circle type checkbox
+ * Select checkbox with animation
+ * Usage component
+ <div class="circleCheckbox">
+    <input class="inp-cbx" id="cbx-15" type="checkbox" />
+    <label class="cbx" for="cbx-15">
+        <span>
+            <svg width="12px" height="9px" viewBox="0 0 12 9">
+                <polyline points="1 5 4 8 11 1"></polyline>
+            </svg>
+        </span>
+        <span>To-do</span>
+    </label>
+  </div>
+ ******/
+
+.circleCheckbox {
+  .cbx {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      transform: translate3d(0, 0, 0);
+      &:first-child {
+        position: relative;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        transform: scale(1);
+        vertical-align: middle;
+        border: 1px solid #6b7280;
+        transition: all 0.2s ease;
+        svg {
+          position: absolute;
+          z-index: 1;
+          top: 4px;
+          left: 2px;
+          fill: none;
+          stroke: white;
+          stroke-width: 2;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-dasharray: 16px;
+          stroke-dashoffset: 16px;
+          transition: all 0.3s ease;
+          transition-delay: 0.1s;
+          transform: translate3d(0, 0, 0) translate(-1px, -1px);
+        }
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: $blue;
+          display: block;
+          transform: scale(0);
+          opacity: 1;
+          border-radius: 50%;
+          transition-delay: 0.2s;
+        }
+      }
+      &:last-child {
+        &:after {
+          content: "";
+          position: absolute;
+          top: 8px;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background: #6b7280;
+          transform-origin: 0 0;
+          transform: scaleX(0);
+        }
+      }
+    } //span
+    &:hover span:first-child {
+      border-color: $blue;
+    }
+  } //.cbx
+  .inp-cbx {
+    display: none;
+    &:checked + .cbx span:first-child {
+      border-color: $blue;
+      background: $blue;
+      animation: check-15 0.6s ease;
+    }
+    &:checked + .cbx span:first-child svg {
+      stroke-dashoffset: 0;
+    }
+    &:checked + .cbx span:first-child:before {
+      transform: scale(2.2);
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+    &:checked + .cbx span:last-child {
+      transition: all 0.3s ease;
+    }
+    &:checked + .cbx span:last-child:after {
+      transition: all 0.3s ease;
+    }
+  } //.inp-cbx
+  @keyframes check-15 {
+    50% {
+      transform: scale(1.2);
+    }
+  }
+} //.circleCheckbox
+
+/*****
+ * Toggle switch checkbox
+ * Google's used checkbox design
+ * Usage component
+ <div class="toggleSwitch">
+    <label>
+        <input type="checkbox" checked />
+        <div class="line"></div>
+        <div class="circle">
+            <svg class="done" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+            </svg>
+            <svg class="undone" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                <path d="M200-440v-80h560v80H200Z" />
+            </svg>
+        </div>
+    </label>
+  </div>
+ ******/
+
+.toggleSwitch {
+  width: fit-content;
+  cursor: pointer;
+  label {
+    position: relative;
+    cursor: pointer;
+    // pointer-events: none;
+    input {
+      width: 0;
+      height: 0;
+      position: absolute;
+      &:checked {
+        & ~ .line {
+          background: $lightBlue2;
+        }
+        & ~ .circle {
+          transform: translateX(22px);
+          background: $blue;
+          .done {
+            display: block;
+          }
+          .undone {
+            display: none;
+          }
+        }
+      }
+    }
+    .line {
+      width: 36px;
+      height: 16px;
+      border-radius: 14px;
+      background: $lightGray2;
+      transition: 0.1s all ease;
+    }
+    .circle {
+      width: 22px;
+      height: 22px;
+      background: $gray;
+      border-radius: 50%;
+      position: absolute;
+      top: -3px;
+      left: -4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.1s all ease;
+      svg {
+        fill: white;
+      }
+      .done {
+        display: none;
+      }
+    }
+  }
+}

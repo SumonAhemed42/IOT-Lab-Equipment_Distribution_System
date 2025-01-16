@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./font";
+@import "./color";
+@import "./box-shadow";
+@import "./button";
+@import "./input";
+@import "./icon";
+@import "./_content-editable-div";
+@import "./navbar";
+@import "./scrollbar";
+@import "./flexbox";
+@import "./z-index";
+@import "./animation";
+@import "./checkbox";
+@import "./line-loader";
+@import "./spin-loader";
+@import "./alignment";
+@import "./border";
+@import "./quill";
+@import "./pagination";
+
+@import "./c/classList";
+@import "./c/openClass";
+
+html {
+  scroll-behavior: smooth;
+  body {
+    --blue: #007bff;
+    --blue2: #0069da;
+    --lightBlue: #e8f0fe;
+    --lightBlue2: #9fc3fe;
+
+    input,
+    textarea {
+      outline: none;
+    }
+    div {
+      outline: none;
+    }
+  }
+}
+
+.dark body {
+  background: $black2;
+  *,
+  div,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5.h6,
+  span,
+  a,
+  button {
+    color: white;
+  }
+}
+
+.pageLoadTransition {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.noSelect {
+  -webkit-user-select: none; /* Chrome, Safari, Opera */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and Firefox */
+}
+
+.hyperlink {
+  color: $blue;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

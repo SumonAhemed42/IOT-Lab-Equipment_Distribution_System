@@ -1,0 +1,132 @@
+@layer utilities {
+  .navbarShadow {
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+      0 2px 6px 2px rgba(60, 64, 67, 0.15);
+    border-color: transparent;
+  }
+}
+
+.navbarActiveLine2,
+.navbarActiveLine4,
+.navbarActiveLine12 {
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+/*****
+ * A blue line move to left right with animation
+ * Animation make the line strecth like rubber
+ * This version CSS used for short distance travel of line
+ ******/
+.navbarActiveLine2 {
+  .line {
+    width: 0;
+    height: 4px;
+    background-color: $blue;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+  }
+  .line1 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease, width 0.25s ease;
+  }
+  .line2 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.15s, width 0.25s ease 0.15s;
+  }
+}
+
+/*****
+ * This version CSS used for medium distance travel of line
+ ******/
+.navbarActiveLine4 {
+  .line {
+    width: 0;
+    height: 4px;
+    background-color: $blue;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+  }
+  .line1 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease, width 0.25s ease;
+  }
+  .line2 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.05s, width 0.25s ease 0.05s;
+  }
+  .line3 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.1s, width 0.25s ease 0.1s;
+  }
+  .line4 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.15s, width 0.25s ease 0.15s;
+  }
+}
+
+/*****
+ * This version CSS used for long distance travel of line
+ ******/
+.navbarActiveLine12 {
+  .line {
+    width: 0;
+    height: 4px;
+    background-color: $blue;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+  }
+  .line1 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease, width 0.25s ease;
+  }
+  .line2 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.0136s, width 0.25s ease 0.0136s;
+  }
+  .line3 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.0272s, width 0.25s ease 0.0272s;
+  }
+  .line4 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.0408s, width 0.25s ease 0.0408s;
+  }
+  .line5 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.0544s, width 0.25s ease 0.0544s;
+  }
+  .line6 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.068s, width 0.25s ease 0.068s;
+  }
+  .line7 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.0816s, width 0.25s ease 0.0816s;
+  }
+  .line8 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.0952s, width 0.25s ease 0.0952s;
+  }
+  .line9 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.1088s, width 0.25s ease 0.1088s;
+  }
+  .line10 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.1224s, width 0.25s ease 0.1224s;
+  }
+  .line11 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.136s, width 0.25s ease 0.136s;
+  }
+  .line12 {
+    border-radius: 8px 8px 0 0;
+    transition: left 0.25s ease 0.1496s, width 0.25s ease 0.1496s;
+  }
+}

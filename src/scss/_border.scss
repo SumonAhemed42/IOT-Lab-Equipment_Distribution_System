@@ -1,0 +1,11 @@
+@layer utilities {
+  .borderBlue {
+    border-color: var(--blue);
+  }
+  .borderLightBlue {
+    border-color: var(--lightBlue);
+  }
+  .outlineBlue {
+    outline-color: $blue;
+  }
+}

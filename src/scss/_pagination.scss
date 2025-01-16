@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  *,
+  a,
+  div {
+    user-select: none;
+  }
+  li {
+    padding: 2px 0;
+    border-radius: 4px;
+    &:hover:not(.selected) {
+      background: $lightBlue;
+    }
+    a {
+      padding: 0 8px;
+    }
+  }
+  .selected {
+    background: $blue;
+    color: white;
+  }
+}

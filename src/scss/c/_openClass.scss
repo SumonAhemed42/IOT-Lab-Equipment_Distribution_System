@@ -1,0 +1,143 @@
+.openClass {
+  .reactQuillPost {
+    &:focus-within {
+      label {
+        top: 8px;
+        font-size: 12px;
+      }
+      .grayLine {
+        opacity: 0;
+      }
+      .blueLine {
+        width: 100%;
+        transition: width 0.25s ease-in-out;
+      }
+    }
+    .validLabel {
+      top: 8px;
+      font-size: 12px;
+    }
+    .quill {
+      .ql-editor {
+        min-height: 160px;
+      }
+    }
+  }
+  .contentEditableTextarea {
+    position: relative;
+    padding: 8px 12px 12px;
+    border-radius: 8px 8px 0 0;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background: $blue;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s ease;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: $gray;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s ease;
+    }
+    &:focus-within {
+      &::before {
+        width: 100%;
+      }
+      &::after {
+        opacity: 0;
+      }
+    }
+    &.active {
+      label {
+        top: 8px;
+        left: 12px;
+        font-size: 14px;
+      }
+    }
+    &:focus-within {
+      .Path {
+        .GrayLine {
+          width: 0%;
+        }
+        .ColorLine {
+          opacity: 0;
+        }
+      }
+      label {
+        color: $blue;
+      }
+    }
+    label {
+      position: absolute;
+      top: 20px;
+      left: 12px;
+      font-size: 16px;
+      transition: 0.2s all ease;
+      color: $placeholder;
+    }
+    .TextFormattingIcons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      button {
+        & > div > svg {
+          fill: $gray;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+          &:hover {
+            fill: $blue;
+          }
+        }
+      }
+    }
+  }
+
+  .writeCommentBox {
+    .TextAreaWrapper {
+      border: 1px solid rgb(209 213 219);
+      border-radius: 20px;
+      padding: 0px 12px;
+      &:focus-within {
+        padding: 0px 11px;
+        border: 2px solid $blue;
+        .Textarea {
+          padding: 9px 0;
+        }
+      }
+      .Textarea {
+        width: 100%;
+        min-height: 28px;
+        padding: 10px 0;
+        cursor: text;
+      }
+      .TextFormattingIcons {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 8px 0 16px;
+        button {
+          & > div > svg {
+            fill: $gray;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            &:hover {
+              fill: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

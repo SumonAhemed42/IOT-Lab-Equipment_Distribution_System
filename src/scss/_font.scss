@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Google sans";
+  src: url("/font/Google-sans.woff2");
+}
+@font-face {
+  font-family: "Google sans medium";
+  src: url("/font/Google-sans-medium.woff2");
+}
+@font-face {
+  font-family: "Google sans text";
+  src: url("/font/Google-sans-text.woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/font/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("/font/SF Pro/sf-pro-text_regular.woff2");
+}
+@font-face {
+  font-family: "SF Pro Text Bold";
+  src: url("/font/SF Pro/sf-pro-text_bold.woff2");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/font/SF Pro/sf-pro-display_regular.woff2");
+}
+@font-face {
+  font-family: "SF Pro Display Bold";
+  src: url("/font/SF Pro/sf-pro-display_bold.woff2");
+}
+
+@layer utilities {
+  .fontOs {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  }
+  .fontGs {
+    font-family: "Google sans";
+    letter-spacing: 0.15px;
+  }
+  .fontGsm {
+    font-family: "Google sans medium";
+    letter-spacing: 0.15px;
+  }
+  .fontGst {
+    font-family: "Google sans text";
+    letter-spacing: 0.1px;
+  }
+  .fontRoboto {
+    font-family: "Roboto";
+    letter-spacing: 0.1px;
+  }
+  .fontSft {
+    font-family: "SF Pro Text";
+    letter-spacing: -0.022em;
+    line-height: 1.47059;
+  }
+  .fontSftBold {
+    font-family: "SF Pro Text Bold";
+    letter-spacing: -0.022em;
+    line-height: 1.47059;
+  }
+  .fontSfd {
+    font-family: "SF Pro Display";
+    font-weight: 600;
+    line-height: 1.08349;
+    // letter-spacing: -0.003em;
+  }
+  .fontSfdBold {
+    font-family: "SF Pro Display Bold";
+    // font-weight: 600;
+    // line-height: 1.08349;
+    // letter-spacing: -0.003em;
+  }
+  .text13 {
+    font-size: 0.8125rem /* 13px */;
+    line-height: 1.125rem /* 18px */;
+  }
+  .text15 {
+    font-size: 0.9375rem /* 15px */;
+    line-height: 1.375rem /* 22px */;
+  }
+}

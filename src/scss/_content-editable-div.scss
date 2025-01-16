@@ -1,0 +1,47 @@
+.contentEditableDiv {
+  &:empty::before {
+    content: attr(data-placeholder);
+    display: block;
+    height: 100%;
+    color: $placeholder;
+  }
+  b,
+  i,
+  u {
+    font-size: inherit;
+  }
+  a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    word-wrap: break-word;
+  }
+  ul li {
+    list-style: disc !important;
+  }
+  ol li {
+    list-style: decimal !important;
+  }
+  ul,
+  ol {
+    position: relative;
+    left: 28px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  hr {
+    opacity: 0;
+    padding: 1px 0;
+  }
+}
+
+.contentEditableDivPlaceholder {
+  &:empty::before {
+    content: attr(data-placeholder);
+    display: block;
+    height: 100%;
+    color: $placeholder;
+  }
+}

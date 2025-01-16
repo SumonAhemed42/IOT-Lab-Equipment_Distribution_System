@@ -1,0 +1,285 @@
+@layer utilities {
+  // Hide arrows from input number
+  .hideNumberInputArrow {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+/*****
+ * Input text field style 1
+ * Usage component
+ <div class="textField">
+    <input type="text" required />
+    <label>Name</label>
+  </div>
+ ******/
+
+.textField {
+  position: relative;
+  width: 100%;
+  border: 1px solid $gray;
+  border-radius: 4px;
+  display: flex;
+  &.caretNone {
+    caret-color: transparent;
+  }
+  &:focus-within {
+    border: 2px solid $blue;
+    input {
+      padding: 13px 9px;
+    }
+  }
+  label {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    background: transparent;
+    padding: 0 4px;
+    transition: all 0.1s ease;
+    pointer-events: none;
+    color: $placeholder;
+  }
+
+  &.showPlaceholder {
+    input[placeholder]::-webkit-input-placeholder {
+      opacity: 0;
+    }
+    input[placeholder]:focus::-webkit-input-placeholder {
+      opacity: 1;
+      -webkit-transition: opacity 0.5s ease;
+      -moz-transition: opacity 0.5s ease;
+      transition: opacity 0.5s ease;
+    }
+  }
+  input {
+    background: white;
+    width: 100%;
+    padding: 14px 10px;
+    border-radius: 4px;
+    opacity: 0;
+    &:focus {
+      opacity: 1;
+      & + label {
+        font-size: 12px;
+        top: -10px;
+        color: $blue;
+        background: white;
+      }
+    }
+    &:valid {
+      opacity: 1;
+      & + label {
+        font-size: 12px;
+        background: white;
+        top: -10px;
+      }
+    }
+  } //input
+} //.textField
+
+.dark .textField {
+  input {
+    background: $black2;
+    color: white;
+    &:focus {
+      & + label {
+        font-size: 12px;
+        background: $black2;
+      }
+    }
+    &:valid {
+      & + label {
+        background: $black2;
+      }
+    }
+  }
+}
+
+/*****
+ * Input text field style 2
+ * Usage component
+  <div class="textField2">
+      <input type="text" placeholder="Name" />
+  </div>
+ ******/
+
+.textField2 {
+  width: 100%;
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  &.caretNone {
+    caret-color: transparent;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0%;
+    height: 2px;
+    background: $blue;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease;
+  }
+  &:focus-within {
+    &::before {
+      width: 100%;
+    }
+  }
+  input {
+    padding: 14px 12px;
+    width: 100%;
+    background: $lightBlue;
+  }
+}
+
+.dark .textField2 {
+  input {
+    background: $black3;
+    color: white;
+  }
+}
+
+/*****
+ * Input text field style 3
+ * Usage component
+  <div class="textField3">
+      <input type="text" required />
+      <label>Name</label>
+  </div>
+ ******/
+.textField3 {
+  position: relative;
+  border-radius: 6px;
+  // background: rgb(244 246 249);
+  display: flex;
+  &.caretNone {
+    caret-color: transparent;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: $blue;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: $gray;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease;
+  }
+  &:focus-within {
+    background: $lightBlue;
+    &::before {
+      width: 100%;
+    }
+    &::after {
+      opacity: 0;
+    }
+  }
+  input {
+    padding: 22px 12px 10px;
+    width: 100%;
+    opacity: 0;
+    background: transparent;
+    &:focus {
+      & + label {
+        color: $blue;
+      }
+    }
+    &:focus,
+    &:valid {
+      opacity: 1;
+      & + label {
+        font-size: 12px;
+        top: 4px;
+      }
+    }
+  }
+  label {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    pointer-events: none;
+    color: $placeholder;
+    transition: 0.2s all ease;
+  }
+}
+
+.dark .textField3 {
+  background: $black3;
+  &:focus-within {
+    background: $black3;
+  }
+  input {
+    color: white;
+  }
+}
+
+/*****
+ * Input text field style 3
+ * Usage component
+  <div class="textField4">
+      <input type="text" required />
+      <label>Name</label>
+  </div>
+ ******/
+.textField4 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  background: rgb(243 244 246);
+  &:hover {
+    background: rgb(229 231 235);
+  }
+  &:focus-within {
+    background: rgb(243 244 246);
+    &::before {
+      width: 100%;
+    }
+  }
+  &.caretNone {
+    caret-color: transparent;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: $blue;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease;
+  }
+  input {
+    padding: 12px 16px;
+    width: 100%;
+    background-color: transparent;
+  }
+}
+
+.dark .textField4 {
+  background: $black3;
+  &:focus-within {
+    background: $black3;
+  }
+  input {
+    color: white;
+  }
+}

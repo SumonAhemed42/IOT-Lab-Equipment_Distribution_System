@@ -1,0 +1,72 @@
+.btn,
+.btn2,
+.btn3,
+.btnDisable {
+  font-family: "Google sans medium";
+  padding: 7px 16px;
+  min-width: 90px;
+  max-width: fit-content;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+// bg blue, text white
+// hover: bg deep-blue
+.btn {
+  background: $blue;
+  cursor: pointer;
+  color: white;
+  &:hover {
+    background: $blue2;
+  }
+}
+
+// bg none, text blue
+// hover: bg light-blue
+.btn2 {
+  color: $blue;
+  cursor: pointer;
+  background: none;
+  &:hover {
+    background: $lightBlue;
+  }
+}
+.dark .btn2 {
+  &:hover {
+    background: $black3;
+    color: white;
+  }
+}
+
+// Light background, hover:light gray
+.btn3 {
+  color: $blue;
+  cursor: pointer;
+  background: $lightBlue;
+}
+.dark .btn3 {
+  background: $black3;
+  &:hover {
+    color: white;
+  }
+}
+
+.btnDisable {
+  background: #e0e0e0;
+  color: $gray;
+  cursor: not-allowed !important;
+}
+.dark .btnDisable {
+  background: #393939;
+}
+
+.btnGrayMac {
+  @apply w-fit px-2 py-0.5 bg-gray-200 rounded-[4px] boxShadowMenu cursor-pointer;
+}
+.btnMac {
+  @apply w-fit px-2 py-0.5 bgBlue rounded-[4px] boxShadowMenu cursor-pointer text-white;
+}
+.btnWhiteMac {
+  @apply w-fit px-2 py-0.5 bg-white rounded-[4px] boxShadowMenu cursor-pointer;
+}
